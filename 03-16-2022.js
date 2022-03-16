@@ -48,3 +48,19 @@ class Kata {
     }
   }
 // *****I was very unfamiliar with the terms 'class' and 'static' but assumed that it worked similar to a function. I did Google the calculations to determine the volume of a cuboid, which was done by multiplying the width, height, and length of the object. 
+
+
+//=============================================================================================================
+
+//Create a function that converts US dollars (USD) to Chinese Yuan (CNY) . The input is the amount of USD as an integer, and the output should be a string that states the amount of Yuan followed by 'Chinese Yuan'
+// Examples (Input -> Output)
+// * 15  -> '101.25 Chinese Yuan'
+// * 465 -> '3138.75 Chinese Yuan'
+// The conversion rate you should use is 6.75 CNY for every 1 USD. All numbers should be represented as a string with 2 decimal places. (e.g. "21.00" NOT "21.0" or "21")
+
+function usdcny(usd) {
+    let yuan = usd * 6.75
+    yuan = yuan.toFixed(2)
+    return `${yuan} Chinese Yuan`
+}
+// *****This challenge wasn't too difficult to document. I did Google the .toFixed method to recall how to utilize it to specify the two decimal places. Overall solid work done.
