@@ -35,3 +35,16 @@ function fakeBin(x){
     return x
 }
 // *****With a quick google, I was able to get this one resolved relatively quickly. I appreciate how I'm honing my googling skills to be able to find what i need and go from there. 
+
+
+//=============================================================================================================
+
+
+//Bob needs a fast way to calculate the volume of a cuboid with three values: length, width and the height of the cuboid. Write a function to help Bob with this calculation.
+
+class Kata {
+    static getVolumeOfCuboid(length, width, height) {
+      return length * width * height
+    }
+  }
+// *****I was very unfamiliar with the terms 'class' and 'static' but assumed that it worked similar to a function. I did Google the calculations to determine the volume of a cuboid, which was done by multiplying the width, height, and length of the object. 
