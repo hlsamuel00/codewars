@@ -19,10 +19,10 @@
 const flip=(d, a)=>{
     let newA = []
     if (d.toLowerCase() === "r"){
-      newA = a.sort(function (a,b) {return a - b});
+      newA = a.sort(function (one, two) {return one - two});
     } else {
-      newA = a.sort(function (a,b) {return a - b}).reverse();
+      newA = a.sort(function (one, two) {return two - one});
     } 
     console.log(newA)
   }
-//*****I was able to structure the function well by googling sort() and implementing the function for comparison to ensure that it's sorting numbers numerically. I need to invest more time into understanding how the comparison function breaks down. 
+//*****I was able to structure the function well by googling sort() and implementing the function for comparison to ensure that it's sorting numbers numerically. I need to invest more time into understanding how the comparison function breaks down. I took a few moments and tested out reversing the order of the comparison and it reverses the sort. 
