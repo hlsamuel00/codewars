@@ -16,3 +16,8 @@ function wrap(value) {
 }
 
 //*****This one wasn't too complicated. I recalled from the JS30 course we did that you must initialize the object first, then enter values into it. I'm extremely proud because I didn't google anything, this was all from working memory :D!!!
+
+
+//=============================================================================================================
+
+
