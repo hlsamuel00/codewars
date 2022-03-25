@@ -44,3 +44,15 @@ function smash (words) {
 
 
 //=============================================================================================================
+
+
+// Write a function that checks if a given string (case insensitive) is a palindrome.
+
+const isPalindrome = x => x.toLowerCase() === x.toLowerCase().split('').reverse().join('') ? true : false;
+
+//*****This was pretty easy to complete as well. This was similar to what we completed in class. I decided to make it an arrow function. It's a bit long so i was considering to make it into a block, but I love practicing my arrow functions. 
+
+
+//=============================================================================================================
+
+
