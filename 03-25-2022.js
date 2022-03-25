@@ -56,3 +56,24 @@ const isPalindrome = x => x.toLowerCase() === x.toLowerCase().split('').reverse(
 //=============================================================================================================
 
 
+// Implement a function which convert the given boolean value into its string representation.
+//     Note: Only valid inputs will be given.
+
+function booleanToString(b){
+    return b.toString();
+}
+
+//*****This was very easy to complete. I feel like I'm on a roll with these today. I love the regularity that these daily challenges are providing!
+
+
+//=============================================================================================================
+
+
+// In this simple exercise, you will create a program that will take two lists of integers, a and b. Each list will consist of 3 positive integers above 0, representing the dimensions of cuboids a and b. You must find the difference of the cuboids' volumes regardless of which is bigger.
+// For example, if the parameters passed are ([2, 2, 3], [5, 4, 1]), the volume of a is 12 and the volume of b is 20. Therefore, the function should return 8.
+// Your function will be tested with pre-made examples as well as random ones.
+// If you can, try writing it in one line of code.
+
+const findDifference = (a, b) => Math.abs(a.reduce((acc,c) => acc * c, 1) - b.reduce((acc,c) => acc * c, 1))
+
+//*****This was a good challenge. I was able to easily get the code on a single line, but forgot to include an option if b was greater than a (producing a negative number). I used Google-Fu and found the Math.abs() method that converted the negative value to a positive integer and I easily integrated it into my code.
