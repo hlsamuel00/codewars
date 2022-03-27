@@ -89,3 +89,19 @@ function reverseList(list) {
 const take = (arr, n) => arr.slice(0, n)
 
 //****I completed this kata with a little difficulty. i was able to use the hint to get the .slice() method to reduce the existing array. I initially tried to use .map() because i wanted to make a new array, but I didn't need a new one, just to reduce the existing array. 
+
+
+//=============================================================================================================
+
+
+// You get an array of numbers, return the sum of all of the positives ones.
+
+// Ex: [1,-4,7,12] => 1 + 7 + 12 = 20
+// Note: if there is nothing to sum, the sum is default to 0.
+
+const positiveSum = arr => arr.filter(e => e > 0).reduce((acc,c) => acc+=c, 0)
+
+//*****I was able to get through this fairly easily. I stumbled a bit with combining methods, but I was able to get it with a quick review of the MDN.
+
+
+//=============================================================================================================
