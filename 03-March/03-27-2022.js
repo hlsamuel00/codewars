@@ -120,3 +120,23 @@ const testEven = n => n % 2 === 0 ? true : false
 //=============================================================================================================
 
 
+// You get any card as an argument. Your task is to return the suit of this card (in lowercase).
+
+// Our deck (is preloaded):
+//     deck = ['2♣','3♣','4♣','5♣','6♣','7♣','8♣','9♣','10♣','J♣','Q♣','K♣','A♣',
+//         '2♦','3♦','4♦','5♦','6♦','7♦','8♦','9♦','10♦','J♦','Q♦','K♦','A♦',
+//         '2♥','3♥','4♥','5♥','6♥','7♥','8♥','9♥','10♥','J♥','Q♥','K♥','A♥',
+//         '2♠','3♠','4♠','5♠','6♠','7♠','8♠','9♠','10♠','J♠','Q♠','K♠','A♠'];
+//     ('3♣') -> return 'clubs'
+//     ('3♦') -> return 'diamonds'
+//     ('3♥') -> return 'hearts'
+//     ('3♠') -> return 'spades'
+
+function defineSuit(card) {
+    if(card.includes('♣')){return 'clubs'}
+    if(card.includes('♦')){return 'diamonds'}
+    if(card.includes('♥')){return 'hearts'}
+    else {return 'spades'}
+  }
+
+//*****I struggled with this solely because i couldn't determine how to produce the characters to test. I am frustrated as I could have completed more than i did and attempted to find the symbols later. LESSON LEARNED!!!!
