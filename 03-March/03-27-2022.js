@@ -162,3 +162,13 @@ function sumStr(a,b) {
 }
 
 //*****This was a quick Kata to complete. I enjoyed running through it.
+
+
+//=============================================================================================================
+
+
+// Complete the function which converts hex number (given as a string) to a decimal number.
+
+const hexToDec = hexString => parseInt(hexString, 16)
+
+//*****I completed this with some Google-Fu. I was able to understand the parseInt() method. My googling skills are improving. 
