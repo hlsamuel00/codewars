@@ -15,7 +15,7 @@
 
 function firstNonConsecutive (arr) {
     for (let i = 0; i < arr.length; i++)
-      if (i !== 0 && arr[i-1] !== arr[i]-1)
+      if (i !== 0 && arr[i-1] !== arr[i] + 1)
         return arr[i]
     return null
   }
@@ -32,6 +32,8 @@ function firstNonConsecutive (arr) {
 //   }
 
 //*****My solution continued to return undefined and I'm unclear as to what was broken. The for loop would do the same as the .forEach() method for the array. 
+
+//*****I re-reviewed this problem and located details that outlined that the for loop works better for this problem de to the ability to break out of the loop once the conditional has been met. Once you find the outlined parameters, it will stop, whereas the for.Each() method will continue to run after the conditions have been met.
 
 
 //=============================================================================================================
@@ -68,3 +70,37 @@ function gooseFilter (birds) {
 //     var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
 //     return birds.filter(b => !geese.includes(b));
 //   };
+
+
+//=============================================================================================================
+
+
+// Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+
+// Examples (Input -> Output):
+// * "String"      -> "SSttrriinngg"
+// * "Hello World" -> "HHeelllloo  WWoorrlldd"
+// * "1234!_ "     -> "11223344!!__  "
+// Good Luck!
+
+function doubleChar(str) {
+    let newStr = ""
+    for (let i = 0; i < str.length; i++){
+      newStr += str[i] + str[i]
+    }
+    return newStr
+  }
+
+//*****I made a slight mistake with the for loop and misspelled the length property which caused my function not to work properly. When I noticed this simple mistake I reviewed the Kata from above and noticed that my math was off so I will resubmit it to determine if I was able to work through it. 
+
+
+//=============================================================================================================
+
+
+// Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
+
+// [Make sure you type the exact thing I wrote or the program may not execute properly]
+
+const greet = name => `Hello, ${name} how are you doing today?`;
+
+//*****I was able to complete this very easily! 
