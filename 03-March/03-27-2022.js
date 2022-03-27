@@ -51,3 +51,31 @@ function countSheep(num){
 //=============================================================================================================
 
 
+// Write a function to split a string and convert it into an array of words.
+
+// Examples (Input -> Output):
+// * "Robin Singh" ==> ["Robin", "Singh"]
+
+// * "I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
+
+function stringToArray(string){
+    return Array.from(string.split(" "))
+  }
+
+//*****I was able to blow through this Kata in like 5 minutes
+
+
+//=============================================================================================================
+
+
+// In this kata you will create a function that takes in a list and returns a list with the reverse order.
+
+// Examples (Input -> Output)
+// * [1, 2, 3, 4]  -> [4, 3, 2, 1]
+// * [9, 2, 0, 7]  -> [7, 0, 2, 9]
+
+function reverseList(list) {
+    return list.reverse()
+}
+
+//*****I completed this Kata really quickly as well. These daily challenges and being aware of the available functions help with retaining this information.
