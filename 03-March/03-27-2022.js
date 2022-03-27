@@ -79,3 +79,13 @@ function reverseList(list) {
 }
 
 //*****I completed this Kata really quickly as well. These daily challenges and being aware of the available functions help with retaining this information.
+
+
+//=============================================================================================================
+
+
+// Create a function that accepts a list/array and a number n, and returns a list/array of the first n elements from the list/array.
+
+const take = (arr, n) => arr.slice(0, n)
+
+//****I completed this kata with a little difficulty. i was able to use the hint to get the .slice() method to reduce the existing array. I initially tried to use .map() because i wanted to make a new array, but I didn't need a new one, just to reduce the existing array. 
