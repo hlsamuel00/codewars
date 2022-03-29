@@ -41,9 +41,20 @@ const isLockNessMonster = s => {
     }
   }
 
-// ***** I have no idea what this Kata was asking for. The solutions made no sense to the problem. The code above is what I wrote. I asked for help from Matt and we'll see how he sees it. 
+//*****I have no idea what this Kata was asking for. The solutions made no sense to the problem. The code above is what I wrote. I asked for help from Matt and we'll see how he sees it. 
 
 
 //=============================================================================================================
 
 
+// We need a function that can transform a number into a string.
+
+// What ways of achieving this do you know?
+
+// Examples:
+// 123 --> "123"
+// 999 --> "999"
+
+const numberToString = num => num.toString()
+
+//*****This one was an easy pass and took me about 2 mins to complete. 
