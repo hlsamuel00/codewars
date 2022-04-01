@@ -7,3 +7,38 @@ const removeChar = str => str.slice(1,-1)
 //=============================================================================================================
 
 
+// Our football team finished the championship. The result of each match look like "x:y". Results of all matches are recorded in the collection.
+
+// For example: ["3:1", "2:2", "0:1", ...]
+
+// Write a function that takes such collection and counts the points of our team in the championship. Rules for counting points for each match:
+
+// if x > y: 3 points
+// if x < y: 0 point
+// if x = y: 1 point
+// Notes:
+
+// there are 10 matches in the championship
+// 0 <= x <= 4
+// 0 <= y <= 4
+
+const points = games => {
+    let points = 0
+    for (let i = 0; i < games.length; i++ ){
+      games[i].charAt(0) > games[i].charAt(games[i].length-1) ? points+=3
+        : games[i].charAt(0) === games[i].charAt(games[i].length-1) ? points+=1
+        : points +=0
+    }
+    return points
+  }
+
+//*****I was able to get this kata relatively easily, but i struggled getting it to refractor. I am going to submit what i have then review the solutions to see what i can gather from there. I was able to refactor my code below:
+// const points = games => {
+//     return (games.filter(x => x.charAt(0) > x.charAt(x.length-1)).length * 3) +
+//            (games.filter(x => x.charAt(0) === x.charAt(x.length-1)).length)
+//   }
+
+
+//=============================================================================================================
+
+
