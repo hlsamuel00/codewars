@@ -42,3 +42,17 @@ const points = games => {
 //=============================================================================================================
 
 
+// Description:
+// Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string. For a beginner kata, you can assume that the input data is always a non empty string, no need to verify it.
+
+//     Ex:
+//     remove("Hi!") === "Hi!"
+//     remove("Hi!!!") === "Hi!"
+//     remove("!Hi") === "Hi!"
+//     remove("!Hi!") === "Hi!"
+//     remove("Hi! Hi!") === "Hi Hi!"
+//     remove("Hi") === "Hi!"
+
+const remove = string => string.split('').filter(x => x != '!').join('').concat('!')
+
+//*****I was able to get this completed but found the replace() method and will look into exploring the details regarding it. 
