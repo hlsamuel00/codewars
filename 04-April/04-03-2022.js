@@ -41,3 +41,20 @@ function gooseFilter (birds) {
 
 
 //=============================================================================================================
+
+
+// Convert number to reversed array of digits
+// Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+
+// Example:
+// 348597 => [7,9,5,8,4,3]
+// 0 => [0]
+
+const digitize = n => n.toString().split('').map(x => Number(x)).reverse()
+
+//*****I completed this kata with relative ease. I'm not a full fan of separating the number to a string to make an array. In looking throught the solutions most answers did the same.
+
+
+//=============================================================================================================
+
+
