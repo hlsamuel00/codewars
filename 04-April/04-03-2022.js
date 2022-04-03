@@ -96,3 +96,19 @@ const pipeFix = numbers => {
 const toFreud = string => string == '' ? '' : string.split(' ').map(x => 'sex').join(' ')
 
 //*****I was attending office hours while completing this kata and was advised that regex is heavy with string manipulation. He recommended that we complete the kata without regex first, then review the solutions to gain knowledge with completing WITH regex.
+
+
+//=============================================================================================================
+
+
+// Write a function get_char() / getChar() which takes a number and returns the corresponding ASCII char for that value.
+
+// Ex:
+//     get_char(65)
+//     should return: 'A'
+
+// Note: For ASCII table, you can refer to http://www.asciitable.com/
+
+const getChar = c => String.fromCharCode(c)
+
+//*****I was able to solve this one with a quick MDN search. There is a method already in the string prototype that converts numbers to characters. 
