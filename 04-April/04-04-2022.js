@@ -49,3 +49,23 @@ const remove = string => {
 //=============================================================================================================
 
 
+// Create a function called shortcut to remove the lowercase vowels (a, e, i, o, u ) in a given string.
+
+// Ex:
+//     "hello"     -->  "hll"
+//     "codewars"  -->  "cdwrs"
+//     "goodbye"   -->  "gdby"
+//     "HELLO"     -->  "HELLO"
+// Note: don't worry about uppercase vowels and y is not considered a vowel for this kata
+
+function shortcut (string) {
+    const vowels = ['a', 'e', 'i', 'o', 'u']
+    return string.split('').filter(x => !vowels.includes(x)).join('');
+  }
+
+//*****Another string manipulation problem that i was able to recall from a previous kata completed. This was a breeze to complete.
+
+
+//=============================================================================================================
+
+
