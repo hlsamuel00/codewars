@@ -20,3 +20,32 @@ const rps = (p1, p2) => {
   };
 
 //*****I was reviewing the code and attempting to refactor my code, but only located details which appeared around OOP, which we haven't covered yet in class. I'd like to review this kata at a later date to see what i've learned between now and then. 
+
+
+//=============================================================================================================
+
+
+// Description:
+// Remove all exclamation marks from the end of sentence.
+
+// Ex:
+//     remove("Hi!") === "Hi"
+//     remove("Hi!!!") === "Hi"
+//     remove("!Hi") === "!Hi"
+//     remove("!Hi!") === "!Hi"
+//     remove("Hi! Hi!") === "Hi! Hi"
+//     remove("Hi") === "Hi"
+
+const remove = string => {  
+    while (string.endsWith('!')){
+      string = string.slice(0,-1)
+    }
+    return string
+  }
+
+//*****I decided to set up a while loop so that it continues to check to ensure the string doesn't end with an '!' this way it can continue the iteration as needed. I still haven't grasped regex completely. All of the solution reference regex so no refactoring to be done until i understand regex more. 
+
+
+//=============================================================================================================
+
+
