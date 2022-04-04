@@ -69,3 +69,25 @@ function shortcut (string) {
 //=============================================================================================================
 
 
+// You'll be given a string, and have to return the sum of all characters as an int. The function should be able to handle all ASCII characters.
+
+// Ex:
+// uniTotal("a") == 97 uniTotal("aaa") == 291
+
+const uniTotal = string => string.split('').reduce((acc, x, i) => acc += string.charCodeAt(i),0)
+
+//*****I am proud of this one. The initial code I wrote can be found below. I was able to refactor the code to what's above. I used a for loop to do an accumulation, but realize that i can turn the string into an array and use the .reduce() method to get the same result more efficiently:
+
+// function uniTotal (string) {
+//     let acc = 0
+//     for (let i = 0; i < string.length; i++){
+//       acc += string.charCodeAt(i)
+//     }
+//     return acc
+//   }
+
+
+//=============================================================================================================
+
+
+
