@@ -66,3 +66,26 @@ const updateLight = current => current == 'green' ? 'yellow' : current == 'yello
 const removeEveryOther = arr => arr.filter((x,i) => i % 2 == 0 ? x : !x)
 
 //*****I am very happy with this because i was able to understand the ternary operator to only review one side of the if statement. The ! means that it will not include the value. 
+
+
+//=============================================================================================================
+
+
+// This function should test if the factor is a factor of base.
+
+// Return true if it is a factor or false if it is not.
+
+// About factors
+// Factors are numbers you can multiply together to get another number.
+
+// 2 and 3 are factors of 6 because: 2 * 3 = 6
+
+// You can find a factor by dividing numbers. If the remainder is 0 then the number is a factor.
+// You can use the mod operator (%) in most languages to check for a remainder
+// For example 2 is not a factor of 7 because: 7 % 2 = 1
+
+// Note: base is a non-negative number, factor is a positive number.
+
+const checkForFactor = (base, factor) => base % factor == 0 ? true : false;
+
+//*****I was able to complete this kata with ease as well. It's truly amazing how doing this daily is truly paying off. I can fully understand a lot of these lower katas.
