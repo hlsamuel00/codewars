@@ -31,3 +31,25 @@ const sixToast = num => Math.abs(num - 6)
 
 
 //=============================================================================================================
+
+
+// You're writing code to control your town's traffic lights. You need a function to handle each change from green, to yellow, to red, and then to green again.
+
+// Complete the function that takes a string as an argument representing the current state of the light and returns a string representing the state the light should change to.
+
+// For example, update_light('green') should return 'yellow'.
+
+const updateLight = current => current == 'green' ? 'yellow' : current == 'yellow' ? 'red' : 'green'
+
+//*****I was able to write this code easily, but wanted to get a better understanding of the map object. This was my refactor using map:
+
+    // const updateLight = (current) => (
+    //     {red: 'green',
+    //      yellow: 'red',
+    //      green: 'yellow'}
+    //   )[current]
+
+//I'm not a 100% fan if it, it seems the code above is much more clearcut and readable. 
+
+
+//=============================================================================================================
