@@ -53,3 +53,16 @@ const updateLight = current => current == 'green' ? 'yellow' : current == 'yello
 
 
 //=============================================================================================================
+
+
+// Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+
+// Example:
+
+// ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+
+// None of the arrays will be empty, so you don't have to worry about that!
+
+const removeEveryOther = arr => arr.filter((x,i) => i % 2 == 0 ? x : !x)
+
+//*****I am very happy with this because i was able to understand the ternary operator to only review one side of the if statement. The ! means that it will not include the value. 
