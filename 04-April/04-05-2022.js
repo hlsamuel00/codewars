@@ -89,3 +89,18 @@ const removeEveryOther = arr => arr.filter((x,i) => i % 2 == 0 ? x : !x)
 const checkForFactor = (base, factor) => base % factor == 0 ? true : false;
 
 //*****I was able to complete this kata with ease as well. It's truly amazing how doing this daily is truly paying off. I can fully understand a lot of these lower katas.
+
+
+//=============================================================================================================
+
+
+// In this simple exercise, you will build a program that takes a value, integer , and returns a list of its multiples up to another value, limit . If limit is a multiple of integer, it should be included as well. There will only ever be positive integers passed into the function, not consisting of 0. The limit will always be higher than the base.
+
+// For example, if the parameters passed are (2, 6), the function should return [2, 4, 6] as 2, 4, and 6 are the multiples of 2 up to 6.
+
+// If you can, try writing it in only one line of code.
+
+const findMultiples = (int, limit) => Array(Math.floor(limit / int)).fill(int).map((x,i) => int * (i+1))
+
+
+//*****I was able to complete this kata with relative ease and refactored the code to fit on one line. This was a solid accomplishment. 
