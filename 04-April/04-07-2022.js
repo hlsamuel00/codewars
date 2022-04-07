@@ -78,3 +78,16 @@ const paperwork = (n, m) => n < 0 || m < 0 ? 0 : n * m
 //=============================================================================================================
 
 
+// Wilson primes satisfy the following condition. Let P represent a prime number.
+
+// Then ((P-1)! + 1) / (P * P) should give a whole number.
+
+// Your task is to create a function that returns true if the given number is a Wilson prime.
+
+const amIWilson = p => {
+    //create factoral 
+    let f = Array(p-1).fill(p-1).map((x,i) => x-i).reduce((acc,x) => acc*=x,1)
+    //determine if quotient is integer
+    return Number.isInteger((f + 1) / (p**2))
+}
+//*****This was a bit tricky as I had to research what a factoral was, but working out how to produce the factoral number was fun indeed. 
