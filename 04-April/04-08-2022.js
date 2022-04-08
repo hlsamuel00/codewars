@@ -69,3 +69,16 @@ const squareSum = numbers => numbers.reduce((acc,x) => acc += x**2,0)
 //=============================================================================================================
 
 
+// Write function bmi that calculates body mass index (bmi = weight / height2).
+
+// if bmi <= 18.5 return "Underweight"
+// if bmi <= 25.0 return "Normal"
+// if bmi <= 30.0 return "Overweight"
+// if bmi > 30 return "Obese"
+
+const bmi = (weight, height) => {
+    let bMi = weight / height**2
+    return bMi <= 18.5 ? 'Underweight' : bMi <= 25 ? 'Normal' : bMi <= 30 ? 'Overweight' : 'Obese'
+  }
+
+//*****This kata was easy to do. I challenged myself to use an arrow function and ternary operators for the if conditional. 
