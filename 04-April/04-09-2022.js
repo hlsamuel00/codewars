@@ -96,7 +96,7 @@ const getRealFloor = n => n <= 0 ? n : n < 13 ? n - 1 : n - 2
 
 // When documents (especially pretty old ones written with a typewriter), are digitised character recognition softwares often make mistakes.
 
-// Your task is correct the errors in the digitised text. You only have to handle the following mistakes:
+// Your task is correct the errors in the digitized text. You only have to handle the following mistakes:
 
 // S is misinterpreted as 5
 // O is misinterpreted as 0
@@ -107,6 +107,21 @@ const correct = string => string.split('').map(x => x == ' ' ? x : x == 5 ? 'S' 
 
 
 //*****This one was a little tricky as the space == 0 which caused an extra 0 to be entered. I fixed that with an additional conditional for the map. 
+
+
+//=============================================================================================================
+
+
+// Your coworker was supposed to write a simple helper function to capitalize a string (that contains a single word) before they went on vacation.
+
+// Unfortunately, they have now left and the code they gave you doesn't work. Fix the helper function they wrote so that it works as intended (i.e. make the first character in the string "word" upper case).
+
+// Don't worry about numbers, special characters, or non-string types being passed to the function. The string lengths will be from 1 character up to 10 characters, but will never be empty.
+
+
+const capitalizeWord = word => word[0].toUpperCase() + word.slice(1)
+
+//*****I was able to fix the code and refactor it. 
 
 
 //=============================================================================================================
