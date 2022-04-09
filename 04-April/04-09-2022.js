@@ -54,3 +54,14 @@ const stringToNumber = str => Number(str)
 
 
 //=============================================================================================================
+
+
+//Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
+
+
+const boolToWord = bool => bool ? 'Yes' : 'No'
+
+//*****This was very easy to accomplish, this also checks whether the entered value is a truthy or a falsy!!
+
+
+//=============================================================================================================
