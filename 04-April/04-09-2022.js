@@ -90,3 +90,23 @@ const getRealFloor = n => n <= 0 ? n : n < 13 ? n - 1 : n - 2
 
 
 //=============================================================================================================
+
+
+// Character recognition software is widely used to digitise printed texts. Thus the texts can be edited, searched and stored on a computer.
+
+// When documents (especially pretty old ones written with a typewriter), are digitised character recognition softwares often make mistakes.
+
+// Your task is correct the errors in the digitised text. You only have to handle the following mistakes:
+
+// S is misinterpreted as 5
+// O is misinterpreted as 0
+// I is misinterpreted as 1
+// The test cases contain numbers only by mistake.
+
+const correct = string => string.split('').map(x => x == ' ' ? x : x == 5 ? 'S' : x == 0 ? 'O' : x == 1 ? 'I' : x).join('')
+
+
+//*****This one was a little tricky as the space == 0 which caused an extra 0 to be entered. I fixed that with an additional conditional for the map. 
+
+
+//=============================================================================================================
