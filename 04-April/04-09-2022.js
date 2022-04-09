@@ -21,3 +21,15 @@ const countSheeps = arrayOfSheep => arrayOfSheep.reduce((acc,x) => x == true ? a
 //=============================================================================================================
 
 
+// Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+
+
+const even_or_odd = number => number % 2 == 0 ? 'Even' : 'Odd'
+
+
+//******I was reviewing the coding solutions and came across a refactored code: 
+    //const even_or_odd = number => number % 2 ? 'Odd' : 'Even'
+//******This shows the values reversed and I understood it as the check returns 0 or 1 where 0 is false and 1 is true. 0 is a falsy
+
+
+//=============================================================================================================
