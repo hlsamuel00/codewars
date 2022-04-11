@@ -117,3 +117,14 @@ const subt = (a,b) => a - b;
 
 //=============================================================================================================
 
+
+// Write a function that returns a string in which firstname is swapped with last name.
+
+// nameShuffler('john McClane'); => "McClane john"
+
+const nameShuffler = (str) => str.split(' ').reverse().join(' ')
+
+//*****This too was easy to accomplish. I noticed that the 8kyus are much easier to tackle than the 7's which means starting this week i will gradually increase to more 7kyu problems.
+
+
+//=============================================================================================================
