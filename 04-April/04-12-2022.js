@@ -17,3 +17,29 @@
 const squareOrSquareRoot = array => array.map(x => Number.isInteger(Math.sqrt(x)) ? Math.sqrt(x) : x**2)
 
 //*****I was able to get this kata very easily. i stumbled a little with the syntax for the isInteger() method, but a quick search got me on the right track. 
+
+
+//=============================================================================================================
+
+
+// Write a function that will check if two given characters are the same case.
+
+// If either of the characters is not a letter, return -1
+// If both characters are the same case, return 1
+// If both characters are letters, but not the same case, return 0
+// Examples
+// 'a' and 'g' returns 1
+
+// 'A' and 'C' returns 1
+
+// 'b' and 'G' returns 0
+
+// 'B' and 'g' returns 0
+
+// '0' and '?' returns -1
+
+const sameCase = (a, b) => !a.match(/^[a-zA-Z]*$/) || !b.match(/^[a-zA-Z]*$/) ? -1 :
+        a == a.toLowerCase() && b == b.toLowerCase() || a == a.toUpperCase() && b == b.toUpperCase() ? 1 : 0
+
+
+//*****I was able to get this, but also reviewed some regex documentation to understand the cases where the the inputs are not letters. 
