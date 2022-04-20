@@ -102,3 +102,17 @@ const makeNegative = num => num <= 0 ? num : -num
 
 
 //=============================================================================================================
+
+// Variable assignment
+// Fix the variables assigments so that this code stores the string 'devLab' in the variable name.
+
+var a = "dev"
+var b = "Lab"
+
+var name = a + b
+
+//*****This was easy to debug. They didn't have an assignemnt, they were doing a comparison with '==' versus just '='.
+
+
+//=============================================================================================================
+
