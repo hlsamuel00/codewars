@@ -50,9 +50,33 @@ function momentOfTimeInSpace(moment) {
     return Array(time < space, time == space, time > space)
 }
 
-//*****I am very proud of this kata because i was abl eto get this and understand the regex used in the solutions. 
+//*****I am very proud of this kata because i was able to get this and understand the regex used in the solutions. 
 
 
 //=============================================================================================================
 
 
+    // ===7kyu===
+
+// In this Kata, you will be given a string and your task will be to return a list of ints detailing the count of uppercase letters, lowercase, numbers and special characters, as follows.
+
+// Solve("*'&ABCDabcde12345") = [4,5,5,3]. 
+// --the order is: uppercase letters, lowercase, numbers and special characters.
+// More examples in the test cases.
+
+// Good luck!
+
+function solve(s){
+    if (s != null){
+        let upper = s.match(/[A-Z]/g).length || 0
+        let lower = s.match(/[a-z]/g).length || 0
+        let digit = s.match(/\d/g).length || 0
+        let special = s.match(/\W/g).length || 0
+        return Array(upper,lower, digit, special)
+    } else {
+        return null
+    }
+}
+//*****I was able to resolve this using regex. I struggled a bit with combining verification with regex, but have figured out how to refactor the code below from looking at some solutions:
+
+    const solve = s => Array(/[A-Z]/g , /[a-z]/g, /\d/g, /\W/g).map(x => s.match(x).length || 0)
