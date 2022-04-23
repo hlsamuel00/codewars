@@ -30,4 +30,5 @@ const isNarcissistic = n => n == n.toString().split('').reduce((acc,x,_,arr) => 
 
 const openOrSenior = data => data.map(x => x[0] > 54 && x[1] > 7 ? 'Senior' : 'Open')
 
-//*****I was able to get this kata challenge relatively easily, but didn't understand the parameters. I was thinking the handicap needed to be lower to be considered "greater" but it was outlining senior as being in a handicapped category. 
+//*****I was able to get this kata challenge relatively easily, but didn't understand the parameters. I was thinking the handicap needed to be lower to be considered "greater" but it was outlining senior as being in a handicapped category. In reviewing the code I loved how clear the following code was:
+   const openORSenior = data => data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open')
