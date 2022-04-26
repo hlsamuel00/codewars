@@ -53,3 +53,30 @@ const vowelIndices = word => {
 //*****I reviewed the solutions and located a way to fix my idea of using the reduce method. The code below is my refactoring using reduce() instead of a map() and filter():
   const vowelindices = (word) => Array(...word).reduce((nArr,el,i) => Array(...'aeiouy').includes(el.toLowerCase()) ? [...nArr, i+1] : nArr, [])
 //*****This kata was really fun to complete!!
+
+
+//=============================================================================================================
+
+
+    //======7kyu======
+
+//     Given the triangle of consecutive odd numbers:
+
+//                 1
+//             3     5
+//         7     9    11
+//     13    15    17    19
+// 21    23    25    27    29
+// ...
+
+// Calculate the sum of the numbers in the nth row of this triangle (starting at index 1) e.g.: (Input --> Output)
+
+// 1 -->  1
+// 2 --> 3 + 5 = 8
+
+const rowSumOddNumbers = n => n**3
+
+//*****I can tell that my expertise has increased. I was able to recognize a pattern and execute code based on that pattern. I wasn't able to get this kata the first time around, but when cleaning up my unfinished kata, i was able to get it cleared. 
+
+
+//=============================================================================================================
