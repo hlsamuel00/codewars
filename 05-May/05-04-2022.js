@@ -52,3 +52,7 @@ function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
     return sharkDistance / sharkSpeed < pontoonDistance / youSpeed ? 'Shark Bait!' : 'Alive!'
   }
   
+
+//I was able to get this kata after a little bit of struggle. I also reviewed the solutions and have devised a refactor:
+const shark = (pD,sD,yS,sS,d) => sD / (d ? sS/2 : sS) < pD / yS ? 'Shark Bait!' : 'Alive!'
+//*****I was very proud of the refactor done on this 
