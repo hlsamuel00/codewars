@@ -118,3 +118,25 @@ String.prototype.toJadenCase = function () {
 
 //=============================================================================================================
 
+
+    //======7kyu======
+
+// A non-empty array a of length n is called an array of all possibilities if it contains all numbers between [0,a.length-1].Write a method named isAllPossibilities that accepts an integer array and returns true if the array is an array of all possibilities, else false.
+
+// Example:
+
+// a=[1,2,0,3]
+// a.length-1=3 
+// a includes [0,3] ,hence the function should return true
+
+function isAllPossibilities(x){
+    let arr = Array.from({length: x.length},(_,i) => i)
+    return arr.every(el => x.includes(el)) && x.length-1 == Math.max(...x)
+}
+
+//*****I was able to get this kata fairly easily. I struggled a bit with the edge cases, but i was able to work through it very well.   I looked through the solutions and located a way to refactor my code below:
+
+const isAllPossibilities2 = x => x.every((_,i) => x.includes(i)) && !!x.length
+
+
+//=============================================================================================================
