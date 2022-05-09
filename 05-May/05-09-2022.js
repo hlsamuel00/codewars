@@ -74,3 +74,27 @@ const sum = (...args) => args.reduce((acc,el) => +acc + el)
 
 
 //=============================================================================================================
+
+
+    //======7kyu======
+
+// After calling the function findSum() with any number of non-negative integer arguments, it should return the sum of all those arguments. If no arguments are given, the function should return 0, if negative arguments are given, it should return -1.
+
+// Example
+// findSum(1,2,3,4); // returns 10 
+// findSum(1,-2);    // returns -1 
+// findSum();        // returns 0 
+// Hint: research the arguments object on google or read Chapter 4 from Eloquent Javascript
+
+function findSum(){
+    return !arguments.length ? 0 :
+    [...arguments].every(x => x >= 0) ? [...arguments].reduce((acc,el) => +acc + el) :
+    -1
+  }
+
+//*****I was able to get this kata with a bit of ease. I also refactored my code to a single line arrow function:
+
+const findSum = (...args) => args.every(x => x >= 0) ? args.reduce((acc,el) => +acc + el, 0) : -1
+
+
+//=============================================================================================================
