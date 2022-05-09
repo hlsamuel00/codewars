@@ -50,3 +50,27 @@ const addBinary = (a,b) => (a+b).toString(2)
 
 
 //=============================================================================================================
+
+
+    //======7kyu======
+
+// Write a function that finds the sum of all its arguments.
+
+// eg:
+
+// sum(1, 2, 3) // => 6
+// sum(8, 2) // => 10
+// sum(1, 2, 3, 4, 5) // => 15
+// TIPS:
+// ruby/python : http://lmgtfy.com/?q=Ruby+splat+operator
+
+// JS/Coffeescript : http://lmgtfy.com/?q=Javascript+arguments+variable
+
+// C: https://www.geeksforgeeks.org/variadic-functions-in-c/
+
+const sum = (...args) => args.reduce((acc,el) => +acc + el)
+
+//*****I played around with how to call the arguments using different notations and was able to use it doing both block and arrow functions. 
+
+
+//=============================================================================================================
