@@ -52,3 +52,29 @@ const roundToNext5 = n => Math.ceil(n / 5) * 5
 
 
 //=============================================================================================================
+
+
+// Create a class Ball. Ball objects should accept one argument for "ball type" when instantiated.
+
+// If no arguments are given, ball objects should instantiate with a "ball type" of "regular."
+
+// ball1 = new Ball();
+// ball2 = new Ball("super");
+
+// ball1.ballType     //=> "regular"
+// ball2.ballType     //=> "super" 
+
+class Ball {
+    constructor(ballType){
+      this._ballType = ballType || 'regular'
+    }
+    get ballType(){
+      return this._ballType
+    }
+  }
+
+
+//*****I was able to get this kata, but circled back to the 8kyus to knock out some of the OOP challenges.
+
+
+//=============================================================================================================
