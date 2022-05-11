@@ -373,3 +373,24 @@ Math.roundTo = (number, precision) => +number.toFixed(precision)
 
 
 //=============================================================================================================
+
+
+// Color Ghost
+// Create a class Ghost
+
+// Ghost objects are instantiated without any arguments.
+
+// Ghost objects are given a random color attribute of "white" or "yellow" or "purple" or "red" when instantiated
+
+// ghost = new Ghost();
+// ghost.color //=> "white" or "yellow" or "purple" or "red"
+
+class Ghost{
+    constructor(){
+      let color = ['white','yellow', 'purple', 'red']
+      this.color = color[Math.floor(Math.random() * color.length)]
+    }
+  }
+
+
+//*****I was able to get this kata with a quick understanding of how to do arrays and the Math.random() method.
