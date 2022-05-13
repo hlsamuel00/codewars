@@ -69,3 +69,21 @@ class Song{
 
   
 //=============================================================================================================
+
+
+// This is the first step to understanding FizzBuzz.
+
+// Your inputs: a positive integer, n, greater than or equal to one. n is provided, you have NO CONTROL over its value.
+
+// Your expected output is an array of positive integers from 1 to n (inclusive).
+
+// Your job is to write an algorithm that gets you from the input to the output.
+
+//Parameters: positive integer, greater than or equal to one
+//Return: return an array of integers from 1 to n (inclusively)
+//Examples: fizzBuzz(5) //Output: [1,2,3,4,5]
+         // fizzbuzz(10) //Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const preFizz = n => Array.from({length: n}, (_, i) => ++i)
+
+//I've begun to use the PREP method to ensure that I get the process started.
