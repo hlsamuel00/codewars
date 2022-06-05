@@ -9,3 +9,7 @@
 const chromosomeCheck = sperm => sperm.toLowerCase().includes('y') ? "Congratulations! You're going to have a son." : "Congratulations! You're going to have a daughter."
 
 //*****This kata was easy to get as well!!
+
+// Looking over the kata i found a better way to refactor the code:
+
+const chromosomeCheck2 = sperm => `Congratulations! You're going to have a ${sperm.toLowerCase().includes('y') ? 'son' : 'daughter'}.`
