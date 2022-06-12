@@ -25,3 +25,13 @@ function evaporator(content, evap_per_day, threshold){
 
 //=============================================================================================================
 
+// Given a string of words (x), you need to return an array of the words, sorted alphabetically by the final character in each.
+
+// If two words have the same last letter, they returned array should show them in the order they appeared in the given string.
+
+// All inputs will be valid.
+
+    const last = x=> x.split(' ').sort((el,el2) => el.charCodeAt(el.length-1) - el2.charCodeAt(el2.length-1))
+
+
+//*****I was able to get this kata after a few tries :D I'm very happy with my ability to break this down. 
