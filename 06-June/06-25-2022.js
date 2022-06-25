@@ -31,4 +31,6 @@ function redistributeWealth(wealth) {
 }
 
 
-//*****I was able to get this kata and review of the MDN allowed me to understand how to mutate an existing array without creating a new array. 
+//*****I was able to get this kata and review of the MDN allowed me to understand how to mutate an existing array without creating a new array. Looking through the solutions, I found a following code that is much more streamlined for my code. Below is my take on the refactor:
+
+const redistributeWealth = wealth => wealth.fill(wealth.reduce((a,b)=> a + b,0) / wealth.length)
