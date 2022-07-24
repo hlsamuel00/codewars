@@ -17,7 +17,7 @@ function dropWhile(arr, pred) {
 //*****I was able to get this kata very easily due to having done the span, but I wanted to refactor the code a bit to utilize while since the name of the kata is dropWhile. I refactored the code below for a while loop.
 
 function dropWhile(arr, pred, ind = 0) {
-    while(ind < arr.length && pred(arr[ind])){ ind++ }
+    while(ind < arr.length && pred(arr[ind])) {ind++}
     return arr.slice(ind)
 }
 
