@@ -33,6 +33,6 @@ const isPrime = num => {
 //*****I was able to get this kata with a bit of googlefu, but in looking through the solutions, i found one that was EXTREMELY clever. the code can be found below:
 
 function isPrime(num, even = 2) {
-    while ((even * even <= num) && (num % even != 0)) { even++ }
-    return even * even > num && num > 1
+    while (even ** 2 <= num && num % even) { even++ }
+    return even ** 2 > num && num > 1
 }
