@@ -23,3 +23,27 @@ const isDivisible = (n,x,y) => {
 }
 
 //=============================================================================================================
+
+// DESCRIPTION:
+// Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+
+// invert([1,2,3,4,5]) == [-1,-2,-3,-4,-5]
+// invert([1,-2,3,-4,5]) == [-1,2,-3,4,-5]
+// invert([]) == []
+// You can assume that all values are integers. Do not mutate the input array/list.
+
+//P: input will be an array of integers
+//R: return should be an array of inverted integers(positives to negatives and vice versa)
+//E: invert([1,2,3,4,5]) => [-1,-2,-3,-4,-5]
+  // invert([1,-2,3,-4,5]) => [-1,2,-3,4,-5]
+  // invert([]) => []
+//Questions: Can I return a new array or does the original array need to be mutated? Will all inputs be number types? 
+
+
+const invert = (arr) => {
+    //create a new array with the values inverted arr.map(x => -x)
+    //return array
+    return arr.map(x => -x)
+}
+
+//=============================================================================================================
