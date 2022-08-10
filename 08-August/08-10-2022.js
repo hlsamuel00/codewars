@@ -47,3 +47,28 @@ const invert = (arr) => {
 }
 
 //=============================================================================================================
+
+// DESCRIPTION:
+// Create a function which answers the question "Are you playing banjo?".
+// If your name starts with the letter "R" or lower case "r", you are playing banjo!
+
+// The function takes a name as its only argument, and returns one of the following strings:
+
+// name + " plays banjo" 
+// name + " does not play banjo"
+// Names given are always valid strings.
+
+//P: input will be a string (a name of the individual)
+//R: return should be a sting detailing whether the person plays or doesn't play the banjo. If the name starts with an R, the person does play, if the name doesn't start with an R, the person doesn't play.
+//E: areYouPlayingBanjo('Ralph') => 'Ralph plays banjo'
+  // areYouPlayingBanjo('Leon') => 'Leon doesn't play banjo'
+  // areYouPlayingBanjo('ronald') => 'ronald plays banjo'
+  // areYouPlayingBanjo('derek') => 'derek doesn't play banjo'
+
+
+const areYouPlayingBanjo = (name) => {
+    //determine the first letter of the string (name[0].toLowerCase())
+    //set up conditional to add doesn't play or plays banjo (name[0].toLowerCase() == 'r' ? 'plays' : "does not play")
+    //return the results
+    return `${name} ${name[0].toLowerCase() == 'r' ? 'plays' : "does not play"} banjo`
+}
