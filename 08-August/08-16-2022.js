@@ -20,3 +20,34 @@ const monkeyCount = n => {
     //return the array
         return Array.from({length: n}, (_,i) => ++i)
 }
+
+//=============================================================================================================
+
+// DESCRIPTION:
+// Task
+// Sum all the numbers of a given array ( cq. list ), except the highest and the lowest element ( by value, not by index! ).
+
+// The highest or lowest element respectively is a single element at each edge, even if there are more than one with the same value.
+
+// Mind the input validation.
+
+// Example
+// { 6, 2, 1, 8, 10 } => 16
+// { 1, 1, 11, 2, 3 } => 6
+// Input validation
+// If an empty value ( null, None, Nothing etc. ) is given instead of an array, or the given array is an empty list or a list with only 1 element, return 0.
+
+//P: input will be an array of integers. the array could be empty
+//R: output should be the sum of all integers excluding the greatest and least valued integer. If the argument is empty or an array of 1 element, return 0
+//E: sumArray([6, 2, 1, 8, 10]) => 16
+  // sumArray([1, 1, 11, 2, 3]) => 6
+
+
+const sumArray = array => {
+    //establish conditional to determine if array is null (array ?)
+    //sort array array.sort((a,b) => a - b)
+    //exclude greatest and least values .slice(1, -1)
+    //sum the remaining values .reduce((acc,el) => acc + el, 0) //the 0 will catch if the length is < 3
+    //return the result
+    return array ? array.sort((a,b) => a - b).slice(1, -1).reduce((acc,el) => acc + el, 0) : 0
+}
