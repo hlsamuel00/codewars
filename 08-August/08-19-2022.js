@@ -25,3 +25,34 @@ const feast2 = (beast, dish) => dish.startsWith(beast[0]) && dish.endsWith(beast
 
 
 //===========================================================================================================//
+
+
+// Messi's Goal Total
+// Use variables to find the sum of the goals Messi scored in 3 competitions
+
+// Information
+// Messi goal scoring statistics:
+
+// Competition	Goals
+// La Liga	43
+// Champions League	10
+// Copa del Rey	5
+// Task
+// Create these three variables and store the appropriate values using the table above:
+// laLigaGoals
+// championsLeagueGoals
+// copaDelReyGoals
+// Create a fourth variable named totalGoals that stores the sum of all of Messi's goals for this year.
+
+//P: create variables that will hold integer values
+//R: return should be a variable named totalGoals that stores the sume of all of the goals for the year
+//E: console.log(totalGoals) => 58
+  // console.log(laLigaGoals) => 43
+  // console.log(copaDelReyGoals) => 5
+  // console.log(championsLeagueGoals) => 10
+
+let laLigaGoals = 43
+let copaDelReyGoals = 5
+let championsLeagueGoals = 10
+
+let totalGoals = laLigaGoals + copaDelReyGoals + championsLeagueGoals
