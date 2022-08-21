@@ -54,3 +54,27 @@ function greet(lang) {
 
 //=============================================================================================================
 
+// DESCRIPTION:
+// You will be given a list of strings. You must sort it alphabetically (case-sensitive, and based on the ASCII values of the chars) and then return the first value.
+
+// The returned value must be a string, and have "***" between each of its letters.
+
+// You should not remove or add elements from/to the array.
+
+//P: input will be an array of strings
+//R: output should be the first element in the list sorted alphabetically with '***' between each letter.
+//E: twoSort(['hello', 'my', 'name', 'is', 'Harvey']) => 'H***a***r***v***e***y'
+  // twoSort(['alpha', 'charlie', 'bravo', 'papa', 'unicorn']) => 'a***l***p***h***a'
+  // twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]) => 'b***i***t***c***o***i***n'
+//Questions:
+
+
+const twoSort = strings => {
+    // create a new map/new array to not modify the existing array [...strings]
+    // sort array alphabetically .sort()
+    // return the first value of array [0]
+    // separate the item (either spread operator (...) or .split())
+    // join it back together with the desired separator .join('***')
+    // return the result
+    return [...[...strings].sort()[0]].join('***')
+}
