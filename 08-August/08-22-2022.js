@@ -30,3 +30,22 @@ const strCount = (string, letter) => {
 
 //=============================================================================================================
 
+// DESCRIPTION:
+// Complete the function which takes two arguments and returns all numbers which are divisible by the given divisor. First argument is an array of numbers and the second is the divisor.
+
+// Example(Input1, Input2 --> Output)
+// [1, 2, 3, 4, 5, 6], 2 --> [2, 4, 6]
+
+//P: input will be an array of integers and a single integer
+//R: output should be the remaining elements of the array that can be divided by the integer
+//E: divisibleBy([1, 2, 3, 4, 5, 6], 2) => [2, 4, 6]
+  // divisibleBy([3, 4, 6, 8, 9, 12], 3) => [3, 6, 9, 12]
+  // divisibleBy([3, 4, 5, 6, 7], 8) => []
+//Question: If the list isn't divisible by the integer, should the output be an empty array? Can the original array be modified or can a new array be returned?
+
+const divisibleBy = (numbers, divisor) => {
+    // filter through the given array to determine if the element is divisible by the divisor
+        // .filter(int => !(int % divisor))
+    // return the results
+    return numbers.filter(int => !(int % divisor))
+}
