@@ -102,3 +102,28 @@ const multiTable = number => {
 }
 
 //=============================================================================================================
+
+// DESCRIPTION:
+// We want an array, but not just any old array, an array with contents!
+
+// Write a function that produces an array with the numbers 0 to N-1 in it.
+
+// For example, the following code will result in an array containing the numbers 0 to 4:
+
+// arr(5) // => [0,1,2,3,4]
+// Note: The parameter is optional. So you have to give it a default value.
+
+//P: input will be an integer
+//R: output will be an array of numbers between 0 and the integer provided
+//E: arr(5) => [0, 1, 2, 3, 4]
+  // arr(1) => [0]
+  // arr() => []
+
+const arr = N => {
+    // Create an array (Array.from())
+    // set the length ({length: N})
+    // map the index ((_,idx) => idx)
+    return Array.from({length: N}, (_,idx) => idx)
+}
+
+//=============================================================================================================
