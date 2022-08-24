@@ -24,3 +24,37 @@ const mouthSize = animal => {
 }
 
 //=============================================================================================================
+
+// DESCRIPTION:
+// Palindrome strings
+// A palindrome is a word, phrase, number, or other sequence of characters which reads the same backward or forward. This includes capital letters, punctuation, and word dividers.
+
+// Implement a function that checks if something is a palindrome. If the input is a number, convert it to string first.
+
+// Examples(Input ==> Output)
+// "anna"   ==> true
+// "walter" ==> false
+// 12321    ==> true
+// 123456   ==> false
+
+//P: input will be either a string or number type
+//R: output should be a boolean whether the input can be read the same backwards or forwards
+//E: isPalindrome('anna') => true
+  // isPalindrome('walter') => false
+  // isPalindrome(12321) => true
+  // isPalindrome('skie0eisk') => true
+//Question: Will the input be separated by any spaces or special characters?
+
+const isPalindrome = input => {
+    // **EDGE CASE** account for spaces in input (input.replace(/\s/g))
+    // account for the number input and convert to string (.toString())
+    const newInput = input.toString().replace(/\s/g, '')
+    // split string into an array (input.split('') or [...input])
+    // reverse the array (.reverse())
+    // put array back together (.join(''))
+    // compare the reverse to the original string (==)
+    // return the comparison (comparison generates a boolean value)
+    return newInput === [...newInput].reverse().join('')
+}
+
+//=============================================================================================================
