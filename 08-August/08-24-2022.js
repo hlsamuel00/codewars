@@ -58,3 +58,37 @@ const isPalindrome = input => {
 }
 
 //=============================================================================================================
+
+// DESCRIPTION:
+// The company you work for has just been awarded a contract to build a payment gateway. In order to help move things along, you have volunteered to create a function that will take a float and return the amount formatting in dollars and cents.
+
+// 39.99 becomes $39.99
+
+// The rest of your team will make sure that the argument is sanitized before being passed to your function although you will need to account for adding trailing zeros if they are missing (though you won't have to worry about a dangling period).
+
+// Examples:
+
+// 3 needs to become $3.00
+
+// 3.1 needs to become $3.10
+// Good luck! Your team knows they can count on you!
+
+//P: input will be a number type
+//R: output should be a string '$' followed by the input to two decimal places
+//E: formatMoney(3) => '$3.00'
+  // formatMoney(3.1) => '$3.10'
+  // formatMoney(5.25) => '$5.25'
+//Question: How should 0's or no input be handled? Will all input be a number type?
+
+const formatMoney = amount => {
+    // format input to a fixed decimal point (.toFixed(2))
+    // input the value parsed into the string containing the character (`$${value}`)
+    // return the result (`$${amount.toFixed(2)}`)
+    //**EDGE CASES**
+        // account for invalid inputs (!Number.isNaN())
+        // account for empty input (parseFloat())
+    return !Number.isNaN(parseFloat(amount)) ? `$${amount.toFixed(2)}` : 'Invalid Entry'
+}
+
+//=============================================================================================================
+
