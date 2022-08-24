@@ -126,3 +126,43 @@ const apple = x =>{
 }
 
 //=============================================================================================================
+
+// DESCRIPTION:
+// Complete the function that receives as input a string, and produces outputs according to the following table:
+
+// Input	Output
+// "Jabroni"	"Patron Tequila"
+// "School Counselor"	"Anything with Alcohol"
+// "Programmer"	"Hipster Craft Beer"
+// "Bike Gang Member"	"Moonshine"
+// "Politician"	"Your tax dollars"
+// "Rapper"	"Cristal"
+// anything else	"Beer"
+
+// Note: anything else is the default case: if the input to the function is not any of the values in the table, then the return value should be "Beer".
+
+// Make sure you cover the cases where certain words do not show up with correct capitalization. For example, the input "pOLitiCIaN" should still return "Your tax dollars".
+
+//P: input will be a string (case insensitive)
+//R: return should be the drink documented on the table provided
+//E: getDrinkByProfession('prOgRaMmeR') => 'Hipster Craft Beer'
+  // getDrinkByProfession('politician') => 'Your tax dollars'
+  // getDrinkByProfession('developer') => 'Beer'
+
+const getDrinkByProfession = param =>{
+    // create an object for the table listed above with the professions as the keys and the drinks as the values (const drinks = {})
+    // establish a default
+    // account for case insensitivity (.toLowerCase())
+    // create a condition that returns the value or the default response (drinks[params] || drinks.default)
+    // return the result
+    const drinks = {
+        "jabroni": "Patron Tequila",
+        "school counselor":	"Anything with Alcohol",
+        "programmer": "Hipster Craft Beer",
+        "bike gang member":	"Moonshine",
+        "politician": "Your tax dollars",
+        "rapper": "Cristal",
+        default: 'Beer'
+    }
+    return drinks[param.toLowerCase()] || drinks.default
+}
