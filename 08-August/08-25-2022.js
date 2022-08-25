@@ -84,3 +84,22 @@ const contamination2 = (text, char) => text.replace(/./g, char)
     // the replace method takes in regex the (/./g) replaces all characters with the (char) 
 
 //=============================================================================================================
+
+// DESCRIPTION:
+// Oh no! Timmy hasn't followed instructions very carefully and forgot how to use the new String Template feature, Help Timmy with his string template so it works as he expects!
+
+// Code provided:
+function buildString(...template){
+    return `I like #{template.join(',')}!`;
+}
+
+// Updated code:
+function buildString(...template){
+    return `I like ${template.join(', ')}!`;
+}
+
+// My code:
+const buildString = (...$) => `I like ${$.map((el,i) => i == $.length-1 ? `and ${el}`: el).join(', ')}!`
+    // my code doesn't satisfy the params of the test, but is grammatically correct :D
+
+//=============================================================================================================
