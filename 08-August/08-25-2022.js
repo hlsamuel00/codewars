@@ -47,3 +47,40 @@ const reverse = string => {
 }
 
 //=============================================================================================================
+
+// DESCRIPTION:
+// An AI has infected a text with a character!!
+
+// This text is now fully mutated to this character.
+
+// If the text or the character are empty, return an empty string.
+// There will never be a case when both are empty as nothing is going on!!
+
+// Note: The character is a string of length 1 or an empty string.
+
+// Example
+// text before = "abc"
+// character   = "z"
+// text after  = "zzz"
+
+//P: input will be 2 strings (text before, character)
+//R: return should be the output of the string after the character has replaced the text before string
+//E: contamination('abc', 'z') => 'zzz'
+  // contamination('', 'z') => ''
+  // contamination('abc', '') => ''
+
+const contamination = (text, char) => {
+    // convert text to an array ([...text] or text.split(''))
+    // map over the array with the new input (.map(el => char))
+        //by using the Array.from() method we can convert the string into an array and map over it in one line of code
+    // join the array back together (.join(''))
+    // return the result
+    return Array.from(text, (x) => char).join('')
+}
+
+// or
+
+const contamination2 = (text, char) => text.replace(/./g, char)
+    // the replace method takes in regex the (/./g) replaces all characters with the (char) 
+
+//=============================================================================================================
