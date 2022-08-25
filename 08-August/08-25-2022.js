@@ -103,3 +103,27 @@ const buildString = (...$) => `I like ${$.map((el,i) => i == $.length-1 ? `and $
     // my code doesn't satisfy the params of the test, but is grammatically correct :D
 
 //=============================================================================================================
+
+// Template Strings
+// Template Strings, this kata is mainly aimed at the new JS ES6 Update introducing Template Strings
+
+// Task
+// Your task is to return the correct string using the Template String Feature.
+
+// Input
+// Two Strings, no validation is needed.
+
+// Output
+// You must output a string containing the two strings with the word ```' are '```
+// Reference: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/template_strings
+
+//P: input will be two strings (object, feature)
+//R: output should be a single string with the word 'are' between the two strings
+//E: TempleStrings('Animals', 'Good') => 'Animals are Good'
+  // TempleStrings('Bears', 'Awesome') => 'Bears are Awesome'
+
+const TempleStrings = (object, feature) => {
+    // create a template string with the object and feature (`{} are {}`)
+    // return the result
+    return `${object} are ${feature}`
+}
