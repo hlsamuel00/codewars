@@ -19,3 +19,31 @@ const sayHello = (name, city, state) =>{
 }
 
 //=============================================================================================================
+
+// DESCRIPTION:
+// You need to write a function that reverses the words in a given string. A word can also fit an empty string. If this is not clear enough, here are some examples:
+
+// As the input may have trailing spaces, you will also need to ignore unneccesary whitespace.
+
+// Example (Input --> Output)
+
+// "Hello World" --> "World Hello"
+// "Hi There." --> "There. Hi"
+// Happy coding!
+
+//P: input will be a string of words. input may have trailing spaces
+//R: output should be a reverse of the words in the string
+//E: reverse('Hello World') => 'World Hello'
+  // reverse('Hi There.') => 'There. Hi'
+  // reverse('   Hello World    ') => 'World Hello'
+
+const reverse = string => {
+    // trim the extra space on the string argument (string.trim())
+    // convert string into an array (string.split(' '))
+    // reverse array (.reverse())
+    // convert array to string (.join(' '))
+    // return the result
+    return string.trim().split(' ').reverse().join(' ')
+}
+
+//=============================================================================================================
