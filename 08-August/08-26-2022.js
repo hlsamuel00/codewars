@@ -26,3 +26,32 @@ const check = (arr, val) => {
 
 
 //=============================================================================================================
+
+
+// DESCRIPTION:
+// Don Drumphet lives in a nice neighborhood, but one of his neighbors has started to let his house go. Don Drumphet wants to build a wall between his house and his neighbor’s, and is trying to get the neighborhood association to pay for it. He begins to solicit his neighbors to petition to get the association to build the wall. Unfortunately for Don Drumphet, he cannot read very well, has a very limited attention span, and can only remember two letters from each of his neighbors’ names. As he collects signatures, he insists that his neighbors keep truncating their names until two letters remain, and he can finally read them.
+
+// Your code will show Full name of the neighbor and the truncated version of the name as an array. If the number of the characters in name is less than or equal to two, it will return an array containing only the name as is"
+
+//P: input will be a string
+//R: output should be the string if the length is < 3 or an array of the string and the string truncated to two two characters
+//E: whoIsPaying('Mexico') => ['Mexico', 'Me']
+  // whoIsPaying('Melania') => ['Melania', 'Me']
+  // whoIsPaying('Me') => ['Me']
+  // whoIsPaying('') => ['']
+  // whoIsPaying('I') => ['I']
+
+const whoIsPaying = name => {
+  // determine if the input is less than 3 (name.length < 3)
+  // create a conditional to parse the two responses ( ? option1 : option2)
+      //option1 = [name]
+      //option2 = [name, name.slice(0,1)]
+  // return the result
+  return name.length < 3 ? [name] : [name, name.slice(0,2)] 
+}
+
+// Looking through the solutions, i found this unique way to return the results the code is below:
+const whoIsPaying2 = name => [...new Set([name, name.slice(0,2)])]
+    // the iteration of the set only returns unique values. If the two entries of the array are the same, the iteration only returns one
+
+//=============================================================================================================
