@@ -119,3 +119,39 @@ const uefaEuro2016 = (teams, scores) =>{
 }
 
 //=============================================================================================================
+
+// DESCRIPTION:
+// Can you implement a function that will return number of words in a string?
+
+// You have to ensure that spaces in string is a whitespace for real.
+
+// Let's take a look on some examples:
+
+// countWords("Hello"); // returns 1 as int
+// countWords("Hello, World!") // returns 2
+// countWords("No results for search term `s`") // returns 6
+// countWords(" Hello") // returns 1
+// // ... and so on
+// What kind of tests we made for your code:
+
+// Function have to count words and not spaces. You have to be sure that you doing it right
+// Empty string has no words.
+// String with spaces around should be trimmed.
+// Non-whitespace (ex. breakspace, unicode chars) should be treated as a delimiter
+// Doublecheck that words with chars like -, ', ` are counted right.
+
+//P: input will be a string of at least one word
+//R: output should be an integer of the word count of the string
+//E: countWords("Hello") => 1 
+  // countWords("Hello, World!") => 2
+  // countWords("No results for search term `s`") => 6
+  // countWords(" Hello") => 1 
+
+const countWords = (string) =>{
+    // trim the white space at beginning and end of array (string.trim())
+    // separate the words into an array (.split(/\s/g))
+    // filter to remove any blank elements in array (.filter(word => word))
+    // get the length property of the array (.length)
+    // return the result
+    return string.trim().split(/\s/g).filter(word => word).length
+}
