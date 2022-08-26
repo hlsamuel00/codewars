@@ -55,3 +55,67 @@ const whoIsPaying2 = name => [...new Set([name, name.slice(0,2)])]
     // the iteration of the set only returns unique values. If the two entries of the array are the same, the iteration only returns one
 
 //=============================================================================================================
+
+// DESCRIPTION:
+// Arrow style Functions
+// Come here to practice the Arrow style functions Not much else to say good luck!
+
+// Details
+// You will be given an array of numbers which can be used using the String.fromCharCode() (JS), Tools.FromCharCode() (C#) method to convert the number to a character. It is recommended to map over the array of numbers and convert each number to the corresponding ascii character.
+
+// Examples
+// These are example of how to convert a number to an ascii Character:
+// Javascript => String.fromCharCode(97) // a
+// C# => Tools.FromCharCode(97) // a
+
+// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
+//P: input will be an array of numbers
+//R: output should be a string made from the array of numbers converted to characters using the String.fromCharCode() method
+//E: arrowFunc([84,101,115,116]) => 'Test'
+  // arrowFunc([70,85,83,32,82,79,72,32,68,65,72]) => 'FUS ROH DAH'
+
+const ArrowFunc = nums => {
+    // map over the array and convert the numbers to strings (nums.map(num => String.fromCharCode(num)))
+    // combine the array (.join())
+    // return the result
+    return nums.map(num => String.fromCharCode(num)).join('')
+}
+
+// Looking over the solutions I found this awesome way to do the iteration:
+const ArrowFunc2 = (nums) => String.fromCharCode(...nums)
+    // the spread operator allows for each individual element of the array to be iterated and converted into a string using the .fromCharCode() method. 
+
+//=========================================================================================================
+
+// DESCRIPTION:
+// Finish the uefaEuro2016() function so it return string just like in the examples below:
+
+// uefaEuro2016(['Germany', 'Ukraine'],[2, 0]) // "At match Germany - Ukraine, Germany won!"
+// uefaEuro2016(['Belgium', 'Italy'],[0, 2]) // "At match Belgium - Italy, Italy won!"
+// uefaEuro2016(['Portugal', 'Iceland'],[1, 1]) // "At match Portugal - Iceland, teams played draw."
+
+//P: input will be two arrays. The first array will be a string of Countries the second array will be a string of scores matching the country
+//R: output should be a string containing the countries that are playing and which team won, or that they played a draw.
+//E: uefaEuro2016(['Germany', 'Ukraine'],[2, 0]) // "At match Germany - Ukraine, Germany won!"
+  // uefaEuro2016(['Belgium', 'Italy'],[0, 2]) // "At match Belgium - Italy, Italy won!"
+  // uefaEuro2016(['Portugal', 'Iceland'],[1, 1]) // "At match Portugal - Iceland, teams played draw."
+
+const uefaEuro2016 = (teams, scores) => {
+    const [ team1, team2 ] = teams
+    const [ score1, score2 ] = scores
+    const winner = score1 > score2 ? team1 : team2
+    return `At match ${teams.join(' - ')}, ${score1 == score2 ? 'teams played draw.' : `${winner} won!`}`
+}
+
+// I wasn't able to get this kata challenge, but looking at the solution, i'm kicking myself for not recalling destructuring to assist with getting details out of the array. I continued to hammer out my thought of using an object and came up with the following code:
+const uefaEuro2016 = (teams, scores) =>{
+    const game = teams.reduce((acc,team,i) => {
+      acc[team] = scores[i]
+      return acc
+    }, {})
+    const result = game[teams[0]] == game[teams[1]] ? 'teams played draw.' : `${teams[scores.indexOf(Math.max(...scores))]} won!`
+    return `At match ${teams.join(' - ')}, ${result}`
+}
+
+//=============================================================================================================
