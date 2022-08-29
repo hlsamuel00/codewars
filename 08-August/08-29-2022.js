@@ -49,3 +49,24 @@ const joinStrings = (string1, string2) => {
 }
 
 //=============================================================================================================
+
+// DESCRIPTION:
+// Write a function that will compare two values, one will be a number and one will be a string. Return true if they are the same character (regardless of their different data types) and return false if they are not.
+
+// To make this challange harder and to promp the challenger to read up about coercion I have disabled some of the built in methods including .toString(), .join(), .split(), parseInt and .Number().
+
+//P: input will be a number and a string
+//R: output should be a boolean value representing whether the two arguments are the same character
+//E: add(1, '1') => true
+  // add(1, '0') => false
+  // add('11', 11) => true
+
+const add = (val1, val2) => {
+    // create comparison between the two values (val1 == val2)
+        // == does a value comparison vs. === does a value and type comparison
+    // comparisons return a boolean value
+    // return the result
+    return val1 == val2
+}
+
+//=============================================================================================================
