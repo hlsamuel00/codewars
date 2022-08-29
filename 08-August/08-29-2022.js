@@ -25,3 +25,27 @@ const charFreq = string => {
 }
 
 //=============================================================================================================
+
+// DESCRIPTION:
+// It is easy to join two strings together like this string1 + string2.
+
+// Another way to get the desired result would be with string1.concat(string2)
+
+// ES6 has introduced another way of joining strings. Your task is to find out what this is and write a function that will add two strings together, there must be a space between the two strings.
+
+// + , .concat() & .join() will not be allowed in this exercise. I have also removed some other methods that can be used to cheat!
+
+// If one of the arguments is a number your code must coerce it into being a string.
+
+//P: input will be strings or numbers
+//R: return should be a single string a merger of both strings
+//E: joinStrings('string1', 'string2') => 'string1 string2'
+  // joinStrings('testing', 'testing') => 'testing testing'
+
+const joinStrings = (string1, string2) => {
+    // because + , .concat() & .join() cannot be used in this kata, create a template literal with the arguments (`${} ${}`)
+    // return the result
+    return `${string1} ${string2}`
+}
+
+//=============================================================================================================
