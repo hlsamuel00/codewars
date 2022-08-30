@@ -103,3 +103,23 @@ const distinct = arr => {
 }
 
 //=============================================================================================================
+
+// DESCRIPTION:
+// Create a function called _if which takes 3 arguments: a boolean value bool and 2 functions (which do not take any parameters): func1 and func2
+
+// When bool is truth-ish, func1 should be called, otherwise call the func2.
+
+// Example:
+// _if(true, function(){console.log("True")}, function(){console.log("false")})
+// // Logs 'True' to the console.
+
+//P: input will be a boolean value and 2 functions which don't take parameters
+//R: output should be function1 if the boolean is truthy and function2 if the boolean is falsy
+//E: _if(true, function(){console.log("True")}, function(){console.log("false")}) => true (console logged from function 1)
+
+const _if = (bool, func1, func2) => {
+    // create conditional that determines if the boolean is truthy (bool ?)
+    // establish the correct output depending on the value (func1 : func2)
+    // return the appropriate result
+    return bool ? func1() : func2()
+}
