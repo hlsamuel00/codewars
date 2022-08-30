@@ -83,3 +83,23 @@ const main = (verb,noun) => verb + noun
 
 //=============================================================================================================
 
+// DESCRIPTION:
+// Define a function that removes duplicates from an array of numbers and returns it as a result.
+
+// The order of the sequence has to stay the same.
+
+//P: input will be an array of numbers
+//R: output should be the array with duplicate numbers removed
+//E: distinct([1]) => [1]
+  // distinct([1, 2, 2, 1]) => [1, 2]
+  // distinct([]) => []
+//Question: How should we handle empty arrays or data types other than arrays?
+
+const distinct = arr => {
+    // create a new set from the values of the array (new Set(arr))
+    // make a new array from the set ([...new Set(arr)])
+    // return the results
+    return [...new Set(arr)]
+}
+
+//=============================================================================================================
