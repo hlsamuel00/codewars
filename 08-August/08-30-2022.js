@@ -63,3 +63,23 @@ const correctTail = (body,tail) => body.slice(-1) === tail
 const correctTail = (body, tail) => body.endsWith(tail)
 
 //=============================================================================================================
+
+// DESCRIPTION:
+// Grasshopper - Function syntax debugging
+// A student was working on a function and made some syntax mistakes while coding. Help them find their mistakes and fix them.
+
+// Code provided:
+function main [verb, noun]
+  return verb + noun
+}
+
+// Updated code:
+function main (verb,noun){
+    return verb + noun
+}
+
+// My code:
+const main = (verb,noun) => verb + noun
+
+//=============================================================================================================
+
