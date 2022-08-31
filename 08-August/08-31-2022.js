@@ -62,3 +62,44 @@ const repeatStr = (n, str) => {
 }
 
 //=============================================================================================================
+
+// Usually when you buy something, you're asked whether your credit card number, phone number or answer to your most secret question is still correct. However, since someone could look over your shoulder, you don't want that shown on your screen. Instead, we mask it.
+
+// Your task is to write a function maskify, which changes all but the last four characters into '#'.
+
+// Examples
+// "4556364607935616" --> "############5616"
+//      "64607935616" -->      "#######5616"
+//                "1" -->                "1"
+//                 "" -->                 ""
+
+// // "What was the name of your first pet?"
+
+// "Skippy" --> "##ippy"
+
+// "Nananananananananananananananana Batman!"
+// -->
+// "####################################man!"
+
+//P: input will be a string
+//R: output should be the string with all but the last 4 digits masked with '#'
+//E: maskify('4556364607935616') => '############5616'
+  // maskify('64607935616') => '#######5616'
+  // maskify('1') => '1'
+  // maskify('11111') => '#1111'
+
+const maskify = value => {
+    // convert values to an array ([...value])
+    // map over array and convert values to '#' 
+        // create conditional to skip the last 4 digits (.map((let, idx) => idx < value.length-4 ? '#' : let))
+    // join array (.join('')) 
+    // return the result
+    return [...value].map((let,idx) => idx < value.length-4 ? '#' : let).join('')
+}
+
+// or
+
+const maskify = value => value.slice(-4).padStart(value.length, '#')
+//this solutoin was completed using the 
+
+//=============================================================================================================
