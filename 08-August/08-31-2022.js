@@ -43,3 +43,22 @@ const solution = string => {
 
 //=============================================================================================================
 
+// DESCRIPTION:
+// Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
+
+// Examples (input -> output)
+// 6, "I"     -> "IIIIII"
+// 5, "Hello" -> "HelloHelloHelloHelloHello"
+
+//P: input will be an integer and a string
+//R: output will be the string repeated n times (n = the integer given)
+//E: repeatStr(6, 'I') => 'IIIIII'
+  // repeatStr(5, 'Hello') => 'HelloHelloHelloHelloHello'
+
+const repeatStr = (n, str) => {
+    //repeat string with n passed in as an argumetn to the method (str.repeat(n))
+    // return the result
+    return str.repeat(n)
+}
+
+//=============================================================================================================
