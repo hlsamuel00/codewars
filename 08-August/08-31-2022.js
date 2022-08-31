@@ -103,3 +103,36 @@ const maskify = value => value.slice(-4).padStart(value.length, '#')
 //this solutoin was completed using the 
 
 //=============================================================================================================
+
+// DESCRIPTION:
+// Trolls are attacking your comment section!
+
+// A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+
+// Your task is to write a function that takes a string and return a new string with all vowels removed.
+
+// For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+
+// Note: for this kata y isn't considered a vowel.
+
+//P: input will be a string
+//R: output should be the string with vowels removed (y is not considered a vowel)
+//E: disemvowel('This website is for losers LOL!') => "Ths wbst s fr lsrs LL!"
+  // disemvowel("No offense but,\nYour writing is among the worst I've ever read") => "N ffns bt,\nYr wrtng s mng th wrst 'v vr rd"
+
+const disemvowel = string => {
+    // split string into an array ([...string])
+    // filter array to remove vowels (.filter(let => ![...'aeiou'].includes(let)))
+        // account for uppercased letters (let.toLowerCase())
+    // convert array to a string (.join(''))
+    // return the result
+    return [...string].filter(let => ![...'aeiou'].includes(let.toLowerCase())).join('')
+}
+
+// or (with regex)
+
+const disemvowel = string => {
+    // replace vowels with nothing (.replace(/[aeiou]/gi, ''))
+    // return the result
+    return string.replace(/[aeiou]/gi, '')
+}
