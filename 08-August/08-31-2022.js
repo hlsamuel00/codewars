@@ -22,3 +22,24 @@ const numberToString = num => {
 
 //=============================================================================================================
 
+// DESCRIPTION:
+// Complete the solution so that it reverses the string passed into it.
+
+// 'world'  =>  'dlrow'
+// 'word'   =>  'drow'
+
+//P: input will be a string
+//R: output should be the string reversed
+//E: solution('world') => 'dlrow'
+  // solution('word') => 'drow'
+
+const solution = string => {
+    // convert the string to an array ([...string] or string.split(''))
+    // reverse the array (.reverse())
+    // convert the array to a string (.join(''))
+    // return the result
+    return [...string].reverse().join('')
+}
+
+//=============================================================================================================
+
