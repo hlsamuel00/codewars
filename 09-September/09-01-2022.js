@@ -28,3 +28,48 @@ const highandLow = string =>{
 }
 
 //=============================================================================================================
+
+
+// DESCRIPTION:
+// You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+
+// #Examples:
+
+// Kata.getMiddle("test") should return "es"
+
+// Kata.getMiddle("testing") should return "t"
+
+// Kata.getMiddle("middle") should return "dd"
+
+// Kata.getMiddle("A") should return "A"
+// #Input
+
+// A word (string) of length 0 < str < 1000 (In javascript you may get slightly more than 1000 in some test cases due to an error in the test cases). You do not need to test for this. This is only here to tell you that you do not need to worry about your solution timing out.
+
+// #Output
+
+// The middle character(s) of the word represented as a string.
+
+//P: input will be a string
+//R: output should be the middle character of the string if the string.length is odd and the middle 2 characters if the string.length is even
+//E: getMiddle('A') => 'A'
+  // getMiddle('middle') => 'dd'
+  // getMiddle('testing') => 't'
+
+const getMiddle = string => {
+    // determine the length of the string, divide it by 2, and store value in a variable (const length = string.length / 2 - 1))
+    // create conditional to determine the responses to provide (!string.length % 2 ?)
+    // create outcomes for both even and odd numbers ( string.slice(length, length+1): string.charAt(Math.round(length)) )
+    // return the result
+    const length = string.length / 2 - 1
+    return !(string.length % 2) ? string.slice(length, length + 2): string.charAt(Math.round(length))
+}
+
+// or
+
+const getMiddle = string =>{
+    const length = Math.round(string.length / 2 - 1)
+    return string.slice(length, length + (string.length % 2 ? 1 : 2))
+}
+
+//=============================================================================================================
