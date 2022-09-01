@@ -73,3 +73,36 @@ const getMiddle = string =>{
 }
 
 //=============================================================================================================
+
+// DESCRIPTION:
+// An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+
+// Example: (Input --> Output)
+
+// "Dermatoglyphics" --> true
+// "aba" --> false
+// "moOse" --> false (ignore letter case)
+
+//P: input will be a string
+//R: output shoudl be a boolean value whether the string has repeating letters or not
+//E: isIsogram('Dermatoglyphics') => true
+  // isIsogram('aba') => false
+  // isIsogram('moOse') => false
+
+
+const isIsogram = str => {
+    // convert string to an array ([...string])
+    // reduce array to count the number of string occurrences (.reduce((acc,el) => acc[el] = (++acc[el] || 1) && acc, {}))
+    // store object into a variable (const count = {})
+    // get the values of object (Object.values(count))
+    // determine if every one is 1 (.every(el => el === 1))
+    // return the result (.every() returns a boolean value)
+    const let = [...str].reduce((acc,el) => (acc[el.toLowerCase()] = (++acc[el.toLowerCase()] || 1)) && acc, {})
+    return Object.values(let).every(el => el == 1)
+}
+
+// or
+
+const isIsogram = string => {
+    return new Set(...[...string.toLowerCase()]).size == string.length
+}
