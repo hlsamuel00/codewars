@@ -67,3 +67,35 @@ const duckDuckGoose = (players, goose) => {
 }
 
 //=============================================================================================================
+
+
+// DESCRIPTION:
+// Task
+// Create a method all which takes two params:
+
+// a sequence
+// a function (function pointer in C)
+// and returns true if the function in the params returns true for every element in the sequence. Otherwise, it should return false. If the sequence is empty, it should return true, since technically nothing failed the test.
+
+// Example
+// all((1, 2, 3, 4, 5), greater_than_9) -> false
+// all((1, 2, 3, 4, 5), less_than_9)    -> True
+
+//P: input will be an array and a callback function
+//R: output should be a boolean whether all elements in the array return true for the function
+//E: all([1, 2, 3, 4, 5], greaterThan9) => false
+  // all([1, 2, 3, 4, 5], lessThan9) => true
+
+const all = (array, func) => {
+    // map through the array to convert values to boolean (array.map(el => func(el)))
+    // determine if all elements are true (.every(el => el))
+    // return the result (.every() returns a boolean value)
+    return array.map(el => func(el)).every(el => el)
+}
+
+// OR
+
+const all = (array, func) => array.every(func)
+
+//=============================================================================================================
+
