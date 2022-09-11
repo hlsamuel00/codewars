@@ -99,3 +99,30 @@ const all = (array, func) => array.every(func)
 
 //=============================================================================================================
 
+// Your Task
+// Given an array of Boolean values and a logical operator, return a Boolean result based on sequentially applying the operator to the values in the array.
+
+// Examples
+// booleans = [True, True, False], operator = "AND"
+// True AND True -> True
+// True AND False -> False
+// return False
+// booleans = [True, True, False], operator = "OR"
+// True OR True -> True
+// True OR False -> True
+// return True
+// booleans = [True, True, False], operator = "XOR"
+// True XOR True -> False
+// False XOR False -> False
+// return False
+
+// I wasn't able to understand this kata, but looking through the solutions, i was able to find a solution that i understood. Below is my version of that code:
+
+const logicalCal = (array, op) => {
+    const ops = {
+        AND: (bool1, bool2) => bool1 && bool2,
+        OR: (bool1, bool2) => bool1 || bool2,
+        XOR: (bool1, bool2) => bool1 != bool2
+    }
+    return array.reduce(ops[op])
+}
