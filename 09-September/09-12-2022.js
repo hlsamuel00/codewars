@@ -51,3 +51,36 @@ const first = (arr, idx = 1) => {
 
 //=============================================================================================================
 
+// DESCRIPTION:
+// Given an array add all the number elements and return the binary equivalent of that sum; to make the code bullet proof anything else than a number should be addeded as 0 since it can't be addeded.
+
+// If your language can handle float binaries assume the array won't contain float or doubles.
+
+// arr2bin([1,2]) == '11'
+// arr2bin([1,2,'a']) == '11'
+// arr2bin([]) == '0'
+
+// NOTE: NaN is a number too in javascript for decimal, binary and n-ary base
+// This is a modification on the Kata: Array2Binary addition hope you like it
+
+//P: input will be an array of numbers and non-numbers
+//R: return should be the binary form of the numbers added together. or '0' for nothing
+//E: arr2bin([1,2]) == '11'
+  // arr2bin([1,2,'a']) == '11'
+  // arr2bin([]) == '0'
+
+const arr2bin = (arr) => {
+    // filter out non numbers from array (arr.filter(el => parseInt(el)))
+    // reduce elements to a single number (.reduce((acc, el) => acc + el, 0))
+        // combine the filter and reduce together (.reduce((acc,el) => parseInt(el) ? acc + el : el, 0))
+    // convert number received to binary (.toString(2) - base 2 in to string converts the string to binary)
+    // return the result
+    // EDGE CASE: to account for NaN (arr.includes(NaN) ? 'NaN' : )
+    return arr.includes(NaN) ? 'NaN' : arr.reduce((acc,el) => parseInt(el) ? acc + el : acc, 0).toString(2)
+}
+
+// After Refactoring:
+const arr2bin = (arr) => arr.reduce((acc,el) => typeof(el) === 'number' ? acc + el : el, 0)
+
+//=============================================================================================================
+
