@@ -120,3 +120,37 @@ const binaryArrayToNumber = (arr) => {
     // return the result
     return parseInt(arr.join(''), 2)
 }
+
+//=============================================================================================================
+
+// DESCRIPTION:
+// Task:
+// Given a list of integers, determine whether the sum of its elements is odd or even.
+
+// Give your answer as a string matching "odd" or "even".
+
+// If the input array is empty consider it as: [0] (array with a zero).
+
+// Examples:
+// Input: [0]
+// Output: "even"
+
+// Input: [0, 1, 4]
+// Output: "odd"
+
+// Input: [0, -1, -5]
+// Output: "even"
+// Have fun!
+
+//P: input will be an array
+//R: output should be either "odd" or "even" depending on the sum of the integers in the array
+//E: oddOrEven([0]) => "even"
+  // oddOrEven([0, 1, 4]) => "odd"
+  // oddOrEven([0, -1, -5]) => "even"
+
+const oddOrEven = (arr) => {
+    // obtain the sum of the values in the array (arr.reduce((acc,el) acc + el, 0))
+    // create conditional to determine if sum is even or odd (!(val % 2) "even" : "odd")
+    // return the result
+    return !(arr.reduce((acc,el) => acc + el, 0) % 2) ? "even" : "odd"
+}
