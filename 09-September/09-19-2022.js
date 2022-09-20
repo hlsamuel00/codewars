@@ -19,7 +19,7 @@ const captials = (word) => {
 
 // Refactored code //
 
-const capitals = (word) => [...word].reduce((acc,el) => (/[A-Z]/.test(el) ? [...acc, el] : acc) && acc, [])
+const capitals = (word) => [...word].reduce((acc,el) => /[A-Z]/.test(el) ? [...acc, word.indexOf(el)] : acc, [])
     // split word into an array ([...word])
     // filter the array to only include capital letters (.filter(el => el == el.toUpperCase()) or .filter(el => /[A-Z]/.test(el)))
     // map over the array to change the letter to it's corresponding index (.map(el => word.indexOf(el)))
