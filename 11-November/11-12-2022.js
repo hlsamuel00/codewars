@@ -16,3 +16,11 @@ const isValidWalk = (walk) => {
     const directionCount = (direction) => walk.filter(el => el == direction).length
     return walk.length === 10 && (directionCount('n') == directionCount('s')) && (directionCount('e') == directionCount('w'))
 }
+
+// OR
+
+function isValidWalk(walk){
+    const distance = { n:0, s:0, e:0, w:0 }
+    walk.forEach(direction => distance[direction]++)
+    return walk.length === 10 && distance.n === distance.s && distance.e === distance.w
+}
